@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Croco AI - CrocoAI Language Access Platform</title>
+  <meta content="AI-powered web application for exploring and chatting with various large language models through a unified interface." name="description">
+  <meta content="AI, language models, OpenRouter, ChatGPT, web app, SvelteKit, TailwindCSS, Node.js, OpenAI, chat interface" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,14 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
@@ -42,48 +34,23 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/portfolio/crocologo.png" alt="Profile image" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Alex Smith</h1>
+      <h1 class="sitename">CrocoAI</h1>
     </a>
 
     <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Apsu123/ChatBot" class="github"><i class="bi bi-github"></i></a>
     </div>
 
-    <nav id="navmenu" class="navmenu">
+            <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="/index.html#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="/index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="/index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
       </ul>
     </nav>
 
@@ -94,7 +61,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Croco AI</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -118,9 +85,6 @@
                 {
                   "loop": true,
                   "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
                   "slidesPerView": "auto",
                   "pagination": {
                     "el": ".swiper-pagination",
@@ -132,20 +96,36 @@
 
               <div class="swiper-wrapper align-items-center">
 
+                <!-- IMAGES -->
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
+                  <img src="assets/img/portfolio/wireframe.png" alt="Initial wireframe design">
+                  <p class="mt-2 text-center text-muted">Initial wireframe design showing the layout of CrocoAI’s chat and model selection interface.</p>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
+                  <img src="assets/img/portfolio/AI.png" alt="Tailwind complexity example">
+                  <p class="mt-2 text-center text-muted">Example illustrating the number of Tailwind class attributes needed for one UI component — an area where AI support greatly improved workflow speed.</p>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
+                  <img src="assets/img/portfolio/TechStack.png" alt="Tech stack overview">
+                  <p class="mt-2 text-center text-muted">Technology stack used: SvelteKit, TailwindCSS, Node.js backend with OpenRouter API integration.</p>
+                </div>
+
+                <!-- VIDEOS -->
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/ScreenRecord.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Demo version showcasing basic model fetching and simple chat functionality — the first MVP milestone.</p>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
+                  <video controls src="assets/img/portfolio/ChatFunctionality.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Added multiline chat support to handle longer prompts and maintain conversational flow.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/MoreModels2.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Update with runtime JSON fetching from Node.js and expanded access to more LLMs via OpenRouter.</p>
                 </div>
 
               </div>
@@ -153,20 +133,25 @@
             </div>
           </div>
 
+          <!-- PROJECT DETAILS -->
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Category</strong>: Web Application / AI Integration</li>
+                <li><strong>Client</strong>: Personal project – CrocoAI</li>
+                <li><strong>Project date</strong>: 10 October, 2025</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/Apsu123/ChatBot">https://github.com/Apsu123/ChatBot</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <h2>CrocoAI – Access to Multiple Large Language Models</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                CrocoAI is an open-access platform for exploring and chatting with different large language models through a single, intuitive interface.  
+                The goal is to make AI more approachable by allowing users to experiment with models such as ChatGPT and other cutting-edge systems offered by OpenRouter.  
+                Designed in SvelteKit and styled with TailwindCSS, the app integrates Node.js for backend operations and provides a clean, modular UI.  
+                AI-assisted design played a crucial role in this project — improving efficiency and design quality without fully automating creativity.  
+                Future improvements include a refined UI, additional model support, and possibly a scalable user database.
               </p>
             </div>
           </div>
@@ -180,20 +165,14 @@
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">CrocoAI</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> • Adapted by <a href="#">CrocoAI Team</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -218,5 +197,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

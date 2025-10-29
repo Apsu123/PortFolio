@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - LearningHub</title>
+  <meta content="Interactive language learning platform with clickable words and AI-powered translation." name="description">
+  <meta content="language learning, AI, chatbot, interactive UI, translation, SvelteKit, TailwindCSS" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/portfolio/SmartFrog.png" alt="Profile image" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">LearningHub</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Apsu123/LearningHub" class="github"><i class="bi bi-github"></i></a>
+    </div>
+
+        <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="/index.html#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="/index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="/index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">LearningHub</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <!-- IMAGES -->
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/InitialWireframe.png" alt="Initial wireframe design">
+                  <p class="mt-2 text-center text-muted">Initial wireframe design showing the concept for clickable and customizable words in text.</p>
+                </div>
+
+                <!-- VIDEOS -->
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/ClickFuntionality.mp4"></video>
+                  <p class="mt-2 text-center text-muted">First working prototype: dictionary words in text become clickable, triggering a function that processes the clicked word.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/NewWireframe.png" alt="Updated wireframe design">
+                  <p class="mt-2 text-center text-muted">Improved wireframe design — cleaner layout and refined typography for readability.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/BasicFunctionality.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Demo version ready — the function sends the clicked word to an AI chatbot API, retrieves a JSON dictionary, and displays live translations.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/BugPic.png" alt="UI bug example">
+                  <p class="mt-2 text-center text-muted">Early UI bug: some words failed to convert into clickable buttons due to string parsing issues.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/BugFix.png" alt="Bug fix progress">
+                  <p class="mt-2 text-center text-muted">Bug reduced — now only affects specific edge-case words. Significant improvement in reliability.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/SmoothUiUpdate.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Final fix — smoother UI and stable functionality. Click handling is consistent across text types.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/Recipes.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Creative repurposing — same clickable text mechanism used for interactive cooking recipes.</p>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- PROJECT DETAILS -->
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web Application / Interactive UI</li>
+                <li><strong>Client</strong>: Personal project – LearningHub</li>
+                <li><strong>Project date</strong>: 8 October, 2025</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/Apsu123/LearningHub">https://github.com/Apsu123/LearningHub</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>LearningHub – Interactive AI-Powered Language Learning</h2>
+              <p>
+                LearningHub is an interactive web application designed to enhance language learning by making every word in a text clickable and meaningful.
+                When clicked, words are processed through an AI chatbot API that provides translations and contextual meanings in real time.  
+                The project began with simple wireframes and evolved into a fully functional demo with live AI integration.  
+                Throughout development, the focus remained on usability, clean interface design, and efficient debugging of text parsing.  
+                Future possibilities include expanding the functionality to other contexts, such as recipe guidance or technical documentation reading.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">LearningHub</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> • Adapted by <a href="#">LearningHub Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

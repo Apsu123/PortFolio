@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - Eagle’s AI Goals</title>
+  <meta content="Computer vision project for detecting and classifying small mechanical parts using deep learning and automated dataset generation." name="description">
+  <meta content="computer vision, AI, object detection, YOLOv8, dataset automation, Python, Google Colab" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/portfolio/Bird.png" alt="Profile image" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Eagle’s AI Goals</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Apsu123/Eagles_AI" class="github"><i class="bi bi-github"></i></a>
+    </div>
+
+        <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="/index.html#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="/index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="/index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Eagle’s AI</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <!-- IMAGES -->
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/train.png" alt="First training done in Google Colab">
+                  <p class="mt-2 text-center text-muted">Initial training session using Google Colab — the model starts learning part recognition.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image.png" alt="First detection example">
+                  <p class="mt-2 text-center text-muted">The model detects poorly but successfully identifies the propeller piece.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy.png" alt="No detection case">
+                  <p class="mt-2 text-center text-muted">Example of a failed detection — the model couldn’t identify any parts.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 2.png" alt="Roboflow dataset creation">
+                  <p class="mt-2 text-center text-muted">Using Roboflow to create and manage datasets before automation with Python.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 3.png" alt="Class separation test">
+                  <p class="mt-2 text-center text-muted">Testing unique serial numbers for each class in dataset labeling.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 4.png" alt="Dataset problem analysis">
+                  <p class="mt-2 text-center text-muted">The model’s low detection accuracy was caused by mixed classes, few augmentations, and differences between training and testing color schemes.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 5.png" alt="Manual labeling frustration">
+                  <p class="mt-2 text-center text-muted">Manual dataset creation proved slow and error-prone — motivating automation.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 6.png" alt="Single image detection success">
+                  <p class="mt-2 text-center text-muted">Improved detection on single, clear images after retraining.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 8.png" alt="Angle and size challenges">
+                  <p class="mt-2 text-center text-muted">Still struggles with different angles and scales, but can detect unseen images — a major step forward.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 9.png" alt="New approach plan">
+                  <p class="mt-2 text-center text-muted">New approach: more images, better augmentation, RGB input, and cleaner class structure.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 13.png" alt="Automated pipeline progress">
+                  <p class="mt-2 text-center text-muted">Predictions improved with automated dataset creation — still struggles with crowded scenes.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 15.png" alt="Background confusion issue">
+                  <p class="mt-2 text-center text-muted">Model learned individual parts well but struggled when backgrounds contained similar pieces.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 17.png" alt="Switch to YOLOv8s model">
+                  <p class="mt-2 text-center text-muted">Switched to YOLOv8s model for better distinction between intricate Lego-like parts.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/image copy 19.png" alt="Real environment detection test">
+                  <p class="mt-2 text-center text-muted">Testing detection in real-world environment with similar backgrounds as training data.</p>
+                </div>
+
+                <!-- VIDEOS -->
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/2025-07-16 10-48-17.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Automated dataset creation pipeline demonstration built with Python.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/2025-07-25 12-08-34.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Early detection testing using real images containing shadows — poor results.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/BBXS.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Testing bounding box accuracy for object annotation.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/BGupdate.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Added new backgrounds to target images to check annotation consistency.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/Fg_BG.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Inclusion of negative (non-target) images helps the model learn what to ignore.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/PredictFromNew.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Model predicting specific parts from random, unseen backgrounds.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/RealBGP.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Testing detection using photos taken in a real-world setting.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <video controls src="assets/img/portfolio/SmallerParts.mp4"></video>
+                  <p class="mt-2 text-center text-muted">Final results — successful detection of smaller and specific parts from cluttered scenes.</p>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- PROJECT DETAILS -->
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Computer Vision / AI Automation</li>
+                <li><strong>Client</strong>: Personal Research Project – Eagle’s AI Goals</li>
+                <li><strong>Project date</strong>: 25 July, 2025</li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/Apsu123/Eagles_AI">https://github.com/Apsu123/Eagles_AI</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>AI-assisted Part Detection using YOLOv8 and Automated Dataset Generation</h2>
+              <p>
+                Eagle’s AI Goals is a hands-on exploration of computer vision techniques for identifying mechanical or Lego-like parts within cluttered environments. 
+                Starting from small manually labeled datasets in Roboflow and Colab, the project evolved into a fully automated pipeline built in Python for generating, augmenting, and labeling training data.
+                Using YOLOv8, the system detects target components with increasing accuracy — transitioning from poor initial results to functional real-world detection.
+                The focus is on dataset quality, augmentation variety, and background balance to improve model robustness.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Eagle’s AI</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> • Adapted by <a href="#">Eagle’s AI team</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
