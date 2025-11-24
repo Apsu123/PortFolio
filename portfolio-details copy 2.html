@@ -103,7 +103,10 @@
                 <!-- VIDEOS -->
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/ClickFuntionality.mp4"></video>
-                  <p class="mt-2 text-center text-muted">First working prototype: dictionary words in text become clickable, triggering a function that processes the clicked word.</p>
+                  <p class="mt-2 text-center text-muted">The crucial milestone of creating a unique link from a specific word.
+This is a prerequisite for the program. I found it very exciting to dynamically modify a string to create functionality. I believe a similar method is used on Wikipedia, where words are linked to their respective pages.
+
+Current efforts focus on the click function, connecting to the API, and returning the JSON object with the correct key–value pairs. The word that becomes the link should also be modifiable in nearly any way imaginable to enhance the user experience.</p>
                 </div>
 
                 <div class="swiper-slide">
@@ -113,17 +116,24 @@
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/BasicFunctionality.mp4"></video>
-                  <p class="mt-2 text-center text-muted">Demo version ready — the function sends the clicked word to an AI chatbot API, retrieves a JSON dictionary, and displays live translations.</p>
+                  <p class="mt-2 text-center text-muted">Demo version.
+The idea was to make it possible to paste any dictionary format and text into the program and have it convert dictionary words in the text into clickable buttons. This is achieved through an API that connects to free AI chatbots such as DeepSeek R1. The service is provided by OpenRouter, which supplies the API keys.
+
+As shown in the video, the dictionary does not need to be in any clean or consistent format for the AI to use it. The API converts the words into a JavaScript object where the foreign word is the key and its translation is the value. The processing takes quite a long time, mainly due to the complexity of the task the chatbot needs to perform. Faster models capable of matching the words accurately could help alleviate this.
+
+I don’t like the UI at this stage and would prefer a more pleasant reading experience. The text and dictionary used here are from my actual English coursebook.</p>
                 </div>
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/BugPic.png" alt="UI bug example">
-                  <p class="mt-2 text-center text-muted">Early UI bug: some words failed to convert into clickable buttons due to string parsing issues.</p>
+                  <p class="mt-2 text-center text-muted">Bug occurs.
+The program is unable to convert all the foreign words correctly. This is unacceptable because it makes reading very difficult. The method for converting words into links involves inserting a specific string into the text that, when compiled, displays the word as a clickable link. At the moment, some words are replaced only with the link syntax, without being converted correctly..</p>
                 </div>
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/BugFix.png" alt="Bug fix progress">
-                  <p class="mt-2 text-center text-muted">Bug reduced — now only affects specific edge-case words. Significant improvement in reliability.</p>
+                  <p class="mt-2 text-center text-muted">Partially solved.
+The issue occurred because some words were converted twice, causing the link syntax to be created from an already clickable word. The solution involved minimizing all the possible ways a word could be converted twice. The program decides whether a word should be converted based on whether it includes certain attributes of the dictionary word. Some of these attributes apply to multiple words, causing duplicate conversions. To solve this, I thought carefully about how a unique word can be identified and no others. I was able to almost completely eliminate the bug—now it occurs only rarely.</p>
                 </div>
 
                 <div class="swiper-slide">
@@ -133,7 +143,12 @@
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/Recipes.mp4"></video>
-                  <p class="mt-2 text-center text-muted">Creative repurposing — same clickable text mechanism used for interactive cooking recipes.</p>
+                  <p class="mt-2 text-center text-muted">Recipe viewing and new UI.
+Inventing new applications for existing technologies is fun too. I often like to try new recipes, but I dislike having multiple windows open at once—one for the recipe, one for the quantities, one for unit conversions, and one just to check what each ingredient even is.
+
+I discovered that this program can solve that problem as well. Instead of pasting text and dictionaries, I now paste a recipe and its ingredient list. The AI backbone performs the same task as before, converting each ingredient in the text into a button that displays how much of it is needed. This eliminates the need for separate windows for the recipe and the ingredients.
+
+I’ve set up two distinct prompts to send to the API depending on whether the user is cooking or not. This functionality can be expanded to show quantities in metric units. I also implemented the long-awaited UI update: the entire text is now displayed in a separate area below the dictionary section, improving focus and the overall learning experience.</p>
                 </div>
 
               </div>
