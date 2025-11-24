@@ -98,7 +98,10 @@
                 <!-- IMAGES -->
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/train.png" alt="First training done in Google Colab">
-                  <p class="mt-2 text-center text-muted">Initial training session using Google Colab — the model starts learning part recognition.</p>
+                  <p class="mt-2 text-center text-muted">Image. First round of training in Google Colab.
+The results were depressing. I had to set the minimum confidence threshold that the model accepts ridiculously low. For the dataset used in the first training sessions, I relied on a service called RoboFlow, which has a manual user interface for image labeling and annotation. All the different LEGO pieces were labeled by their serial numbers. The detection was poor because the classes (labels) got mixed up during dataset creation. As a result, the model associated a single class with multiple different shapes.
+
+In addition, the training was done with monochrome images, while in the real world the images are in color. Another reason for the failure was the very small dataset size and the limited number of augmentations. For a task this complex, at least 100 augmented images per class would be needed even for testing purposes. These issues need to be fixed. Still, it felt nice to see that bounding box appear around the correct object—no matter how low the confidence!</p>
                 </div>
 
                 <div class="swiper-slide">
