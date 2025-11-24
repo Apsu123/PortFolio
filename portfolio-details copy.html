@@ -98,7 +98,7 @@
                 <!-- IMAGES -->
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/train.png" alt="First training done in Google Colab">
-                  <p class="mt-2 text-center text-muted">Image. First round of training in Google Colab.
+                  <p class="mt-2 text-center text-muted">First round of training in Google Colab.
 The results were depressing. I had to set the minimum confidence threshold that the model accepts ridiculously low. For the dataset used in the first training sessions, I relied on a service called RoboFlow, which has a manual user interface for image labeling and annotation. All the different LEGO pieces were labeled by their serial numbers. The detection was poor because the classes (labels) got mixed up during dataset creation. As a result, the model associated a single class with multiple different shapes.
 
 In addition, the training was done with monochrome images, while in the real world the images are in color. Another reason for the failure was the very small dataset size and the limited number of augmentations. For a task this complex, at least 100 augmented images per class would be needed even for testing purposes. These issues need to be fixed. Still, it felt nice to see that bounding box appear around the correct object—no matter how low the confidence!</p>
@@ -174,7 +174,7 @@ In addition, the training was done with monochrome images, while in the real wor
                   <video controls src="assets/img/portfolio/2025-07-16 10-48-17.mp4"></video>
                   <p class="mt-2 text-center text-muted"> 
 
-Download. Python pipeline for dataset creation. 
+Python pipeline for dataset creation. 
 I decided to move from manual to automatic dataset creation. This was important because I could now create larger and more diverse datasets using Python’s image processing libraries such as OpenCV, Scikit-Image, and Pillow. The process begins with obtaining the image data. I could have taken the pictures myself and then augmented them in Python. However, I was interested in testing how quickly and how many free LEGO part images I could download from the internet. 
 
 Using DuckDuckGoSearch, I was able to download hundreds of images very quickly by multithreading, essentially increasing the number of “workers” fetching images simultaneously. The remaining functions in the pipeline do exactly what their names suggest, completing the dataset step by step. The final step is generating a YAML config file for training, which includes the file locations and the class list associated with each LEGO part. .</p>
@@ -187,7 +187,7 @@ Using DuckDuckGoSearch, I was able to download hundreds of images very quickly b
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/BGupdate.mp4"></video>
-                  <p class="mt-2 text-center text-muted">download(2). Testing annotations. 
+                  <p class="mt-2 text-center text-muted">Testing annotations. 
 This program draws a bounding box based on the coordinates in the image's annotation file. Annotating the dataset takes a long time. Fortunately, I only need to annotate the original images; thanks to a library called Albumentations, augmentations are automatically applied to the new annotation files. This ensures the bounding boxes adjust correctly when the LEGO part is scaled, moved, or rotated. 
 
 Adding background or negative images is also important because the model needs to learn which parts not to focus on. Currently, the background images and white canvases come from the internet. These need to be replaced to make real-world predictions more accurate. I plan to pour a pile of LEGO pieces onto white cardboard and use that as the background, since that’s the environment where I want the parts to be detected. The target part images should also be taken in a real setting. This poses a dilemma for parts I don’t have: to train the model to find the part, I’d need to find it first. </p>
@@ -205,7 +205,7 @@ Adding background or negative images is also important because the model needs t
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/RealBGP.mp4"></video>
-                  <p class="mt-2 text-center text-muted">RealBGP. Predicting new images.
+                  <p class="mt-2 text-center text-muted">Predicting new images.
 This program detects LEGO parts and classifies them based on their serial numbers. It uses a YOLOv8 model that I trained on my custom LEGO dataset for 150 epochs. The training took quite a long time because I ran out of Colab's free credits and had to switch to my single GPU. I was able to accelerate it somewhat with the CUDA Python library.
 
 The images contain parts that were randomly augmented so they don’t exist in the training data. This still isn’t a real-life scenario, since the images are sourced from the internet. Additionally, the scale of the parts in the training images doesn’t match the scale of those in the backgrounds. Despite this, the results confirmed the model’s ability to learn specific LEGO parts. The confidence scores were high across all detected parts, and the classes were correct. I used confusion matrices and F1-confidence curves to assess the model’s overall performance.</p>
@@ -213,7 +213,7 @@ The images contain parts that were randomly augmented so they don’t exist in t
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/SmallerParts.mp4"></video>
-                  <p class="mt-2 text-center text-muted">Download(1). Detecting my actual LEGOs.
+                  <p class="mt-2 text-center text-muted"> Detecting my actual LEGOs.
 I poured some LEGO pieces onto a white background and had the model detect the ones I wanted to find. As you can see, the model still struggles to detect real LEGO pieces. The detected part 3022 was almost correct—honestly, I might have mistaken it too at first glance. As mentioned earlier, improving real-world performance would require taking photos of the parts from many angles. Even with the many augmentations I applied in Python, the synthetic images still differ greatly from real scenes.
 
 For example, real parts cast shadows, which can confuse the model. Shadows can hide details and distort shapes. YOLOv8 is primarily used for simpler applications like traffic control, where objects such as cars and people are easier to distinguish. A larger model might be needed to capture the fine details of different LEGO parts, which in turn would require more computing power.</p>
