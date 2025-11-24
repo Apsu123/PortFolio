@@ -98,22 +98,38 @@
                 <!-- IMAGES & VIDEOS -->
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/WhatsApp Image 2025-07-24 at 10.49.22.jpeg" alt="Smart Safe setup">
-                  <p class="mt-2 text-center text-muted">Initial setup for the Smart Safe project — a digital locking system controlled via Arduino and a numpad interface.</p>
+                  <p class="mt-2 text-center text-muted">Numpad used to get user input.
+The numpad works by reading signals from both the row and column pins. These pins need to be configured at the beginning of the program. When a button is pressed, it sends a unique combination of row and column signals. I use an Arduino library called Keypad, which allows the board to read and classify numpad signals and to create custom keypads.
+
+In this case, the customKeypad was created based on the characters and numbers printed on my keypad. I could use any other keypad as well—I'd just need to change the character layout in the code. The keypad’s wires run inside the safe, where they connect to the Arduino board.</p>
                 </div>
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/WhatsApp Video 2025-07-24 at 10.49.21.mp4"></video>
-                  <p class="mt-2 text-center text-muted">Hardware overview: Arduino Uno, Arduino IDE, numpad input, and small motor for controlling the locking mechanism.</p>
+                  <p class="mt-2 text-center text-muted">Demonstration.
+The program continuously reads signals from the numpad. If the # key is pressed, it checks whether the entered code matches the correct one. If it does, the board sends a signal to a servo motor, which is controlled using the Servo library. The signal turns the motor enough for the safe to open. In any case, the entered code is reset whenever the opening key is pressed.
+
+The safe can be closed using the * key. There are two main parts to the code. The setup section defines the correct passcode, configures the numpad, sets and connects the pins, and specifies the motor’s turning angle. These operations don’t need to be repeated during runtime.
+
+The loop section continuously operates the safe by reading numpad input and sending the necessary signals to the motor. The passcode can be easily changed by modifying it in the code and uploading it again. Arduino Uno has a special type of memory that preserves the passcode even when the power is turned off.</p>
                 </div>
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/safe.jpg" alt="Smart Safe prototype">
-                  <p class="mt-2 text-center text-muted">Connecting each numpad button to the Arduino board and programming number verification logic.</p>
+                  <p class="mt-2 text-center text-muted">Wiring.
+The board receives power from a battery pack that is attached to the safe. Power consumption is quite low and can be reduced even further using the same low-power library as in the garden watering system. The board is held in place with steel wires and connected to the battery pack with a power cable.
+
+The wires coming from the numpad are connected to the input pins. The wires controlling the servo motor are connected to an output pin, as well as to the 5V and ground pins.</p>
                 </div>
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/safe2.jpg" alt="Numpad connection">
-                  <p class="mt-2 text-center text-muted">Wiring detail — inputs from the numpad are read and compared against the stored access code before triggering the motor.</p>
+                  <p class="mt-2 text-center text-muted">Lock mechanism.
+The lock mechanism is made using a servo motor and a supporting metal piece. With the equipment I had available, this was the best solution I could build. I didn’t dare try opening the lock with full force, though.
+
+When the correct code is entered, the motor begins turning in a loop until it reaches an angle of 95°, which is enough for the safe to open. When the closing key is pressed, the reverse motion occurs, returning the motor to 0°, where it started.
+
+The turning speed can also be adjusted. The fastest speed this servo could maintain at 5V was 0.12 seconds per 60 degrees, which equals 2 milliseconds per degree. I set the speed to 10 ms/degree, and it was still very fast.</p>
                 </div>
 
                 <div class="swiper-slide">
@@ -140,11 +156,7 @@
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Smart Safe – Programmable Electronic Lock</h2>
               <p>
-                Smart Safe is a DIY project to retrofit an old safe with an Arduino-controlled digital number lock.  
-                The system allows users to open and lock the safe using a numeric keypad and includes the ability to change the access code at any time.  
-                The lock mechanism is powered by a small DC motor, controlled via digital pin outputs on the Arduino Uno board.  
-                The project demonstrates basic principles of embedded systems, including input reading, motor control, and programmatic logic for code validation.  
-                Future improvements include adding an LCD display for feedback.
+This project is an Arduino-based electronic safe that uses a custom numpad for passcode entry and a servo motor to control the lock. The Keypad library detects key presses, and when the user enters a code and confirms with the # key, the program checks it against a stored passcode; if correct, the servo rotates a metal locking piece to open the safe, while the * key closes it again. The setup configures the keypad, motor, and pins, while the loop continuously reads input and triggers the lock mechanism. Powered by a battery pack and wired directly to the Arduino, the system is simple, reliable, and easily customizable in both passcode and motor behavior.
               </p>
             </div>
           </div>
