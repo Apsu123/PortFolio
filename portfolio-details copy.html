@@ -182,7 +182,10 @@ Using DuckDuckGoSearch, I was able to download hundreds of images very quickly b
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/2025-07-25 12-08-34.mp4"></video>
-                  <p class="mt-2 text-center text-muted">Early detection testing using real images containing shadows — poor results.</p>
+                  <p class="mt-2 text-center text-muted">Detecting my actual LEGOs.
+I poured some LEGO pieces onto a white background and had the model detect the ones I wanted to find. As you can see, the model still struggles to detect real LEGO pieces. The detected part 3022 was almost correct—honestly, I might have mistaken it too at first glance. As mentioned earlier, improving real-world performance would require taking photos of the parts from many angles. Even with the many augmentations I applied in Python, the synthetic images still differ greatly from real scenes.
+
+For example, real parts cast shadows, which can confuse the model. Shadows can hide details and distort shapes. YOLOv8 is primarily used for simpler applications like traffic control, where objects such as cars and people are easier to distinguish. A larger model might be needed to capture the fine details of different LEGO parts, which in turn would require more computing power.</p>
                 </div>
 
                 <div class="swiper-slide">
@@ -213,10 +216,7 @@ The images contain parts that were randomly augmented so they don’t exist in t
 
                 <div class="swiper-slide">
                   <video controls src="assets/img/portfolio/SmallerParts.mp4"></video>
-                  <p class="mt-2 text-center text-muted"> Detecting my actual LEGOs.
-I poured some LEGO pieces onto a white background and had the model detect the ones I wanted to find. As you can see, the model still struggles to detect real LEGO pieces. The detected part 3022 was almost correct—honestly, I might have mistaken it too at first glance. As mentioned earlier, improving real-world performance would require taking photos of the parts from many angles. Even with the many augmentations I applied in Python, the synthetic images still differ greatly from real scenes.
-
-For example, real parts cast shadows, which can confuse the model. Shadows can hide details and distort shapes. YOLOv8 is primarily used for simpler applications like traffic control, where objects such as cars and people are easier to distinguish. A larger model might be needed to capture the fine details of different LEGO parts, which in turn would require more computing power.</p>
+                  <p class="mt-2 text-center text-muted">Predicting "new" images from real background. These are unseen, augmented images that are put to the correct scale with actual LEGOS. They are still not actual LEGOS, though :( </p>
                 </div>
 
               </div>
